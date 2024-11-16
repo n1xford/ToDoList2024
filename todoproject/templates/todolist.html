@@ -16,8 +16,8 @@
         {% for i in all_items %}
         <li>
             {{i.content}}
-            <form action="функція" method="post"> {% csrf_token %}
-                ----------------------------------------->
+            <form action="/deleteTodoItem/{{ i.id }}" method="post"> {% csrf_token %}
+                <input type="submit" value="Delete">
 
             </form>
         </li>
